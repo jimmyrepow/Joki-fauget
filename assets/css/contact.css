@@ -1,0 +1,221 @@
+/* ============================================================
+   Joki Fauget — contact.css
+   Section CTA akhir (latar gelap) dan form konsultasi:
+   label, field, pesan error, serta notifikasi berhasil.
+   ============================================================ */
+
+.final-cta {
+  background: var(--dark-bg);
+  background-image: url("../img/paper-texture-dark.svg");
+  background-repeat: repeat;
+  background-size: 240px 240px;
+  color: var(--dark-text);
+  position: relative;
+  overflow: hidden;
+  padding: clamp(3rem, 7vw, 4.6rem) 0;
+}
+
+.final-cta h2 {
+  color: var(--dark-text);
+  font-size: clamp(1.7rem, 3.8vw, 2.5rem);
+}
+
+.cta-copy > p {
+  color: var(--dark-text-soft);
+  font-size: 1rem;
+}
+
+.cta-copy > .cta-handle { color: var(--brand-yellow); }
+
+.cta-wrap { position: relative; }
+.cta-copy { position: relative; z-index: 1; }
+
+.cta-blob {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--brand-yellow);
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.cta-blob.b1 {
+  width: 260px;
+  height: 260px;
+  top: -90px;
+  right: -60px;
+}
+
+.cta-blob.b2 {
+  width: 200px;
+  height: 200px;
+  bottom: -80px;
+  left: -50px;
+  background: var(--brand-orange);
+  opacity: 0.14;
+}
+
+.cta-star {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background: var(--brand-yellow);
+  opacity: 0.5;
+  clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  pointer-events: none;
+}
+
+.cta-star.s1 { top: 1.6rem; left: 8%; }
+.cta-star.s2 { bottom: 1.8rem; right: 10%; transform: rotate(20deg); opacity: 0.35; }
+
+.cta-handle {
+  color: var(--brand-yellow);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.cta-handle:hover { color: #fff; }
+
+/* ---------- Form ---------- */
+.form-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(1.25rem, 3vw, 1.8rem);
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 0.86rem;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+
+.form-label .opt {
+  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+#formHint {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.form-control,
+.form-select {
+  background: var(--field-bg);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  color: var(--text);
+  font-size: 0.92rem;
+  padding: 0.65rem 0.85rem;
+  transition: border-color 0.18s, box-shadow 0.18s, background 0.18s,
+    color 0.18s;
+}
+
+.form-control::placeholder { color: var(--text-muted); }
+
+.form-control:focus,
+.form-select:focus {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+  border-color: var(--danger);
+  background: var(--danger-bg);
+}
+
+.err {
+  color: var(--danger);
+  font-size: 0.78rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.err.show { display: block; }
+
+.alert-ok {
+  display: none;
+  background: var(--success-bg);
+  border: 1px solid var(--success-line);
+  color: var(--success-text);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.alert-ok.show { display: block; }
+.alert-ok p,
+.alert-ok #formOkText { color: inherit; }
+
+.message-preview {
+  width: 100%;
+  margin-top: 0.7rem;
+  padding: 0.7rem;
+  background: var(--surface);
+  border: 1px solid var(--success-line);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.message-preview[hidden] { display: none; }
+
+.alert-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.7rem;
+}
+
+.alert-actions a {
+  color: var(--success-text);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.copy-btn {
+  background: var(--surface);
+  border: 1px solid var(--success-line);
+  border-radius: 8px;
+  color: var(--success-text);
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  transition: background 0.18s, border-color 0.18s, transform 0.15s ease;
+}
+
+.copy-btn:active { transform: scale(0.96); }
+
+.copy-btn:hover {
+  background: var(--success-bg);
+  border-color: var(--success-text);
+}
+
+.contact-mini {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  font-size: 0.9rem;
+}
+
+.contact-mini svg {
+  color: var(--brand-yellow);
+  flex: none;
+  margin-top: 0.2rem;
+}

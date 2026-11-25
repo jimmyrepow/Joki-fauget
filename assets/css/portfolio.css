@@ -1,0 +1,394 @@
+/* ============================================================
+   Joki Fauget — portfolio.css
+   Filter kategori, kartu project, preview mockup CSS,
+   badge, dan tombol detail.
+   ============================================================ */
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 99px;
+  padding: 0.45rem 1.1rem;
+  transition: background 0.18s, border-color 0.18s, color 0.18s,
+    transform 0.15s ease;
+}
+
+.filter-btn:active { transform: scale(0.96); }
+
+.filter-btn:hover {
+  border-color: var(--text);
+  background: var(--surface);
+}
+
+.filter-btn.active {
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--bg);
+}
+
+.portfolio-card {
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-card.hide { display: none; }
+
+/* ---------- Preview dekoratif ---------- */
+.pf-preview {
+  aspect-ratio: 16 / 10;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.pf-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.portfolio-card:hover .pf-img {
+  transform: scale(1.02);
+}
+
+.pf-preview.web { background: var(--grad-pf-web); }
+.pf-preview.dash { background: var(--grad-pf-dash); }
+.pf-preview.data { background: var(--grad-pf-data); }
+.pf-preview.table { background: var(--grad-pf-dash); }
+.pf-preview.doc { background: var(--grad-pf-web); }
+.pf-preview.poster { background: var(--grad-pf-data); }
+.pf-preview.video { background: var(--grad-pf-web); }
+
+/* Preview dokumen, poster, dan video */
+.pf-doc {
+  width: 66%;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 0.55rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.pf-doc .h {
+  height: 5px;
+  border-radius: 99px;
+  background: var(--text);
+  width: 55%;
+  margin-bottom: 0.3rem;
+}
+
+.pf-doc .l {
+  height: 3px;
+  border-radius: 99px;
+  background: var(--line-strong);
+  margin-bottom: 0.22rem;
+}
+
+.pf-doc .l.s { width: 72%; }
+
+.pf-poster {
+  width: 46%;
+  aspect-ratio: 3 / 4;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.45rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.22rem;
+}
+
+.pf-poster-head {
+  height: 8px;
+  border-radius: 99px;
+  background: var(--accent);
+  width: 60%;
+}
+
+.pf-poster-line {
+  height: 4px;
+  border-radius: 99px;
+  background: var(--text);
+}
+
+.pf-poster-line.short {
+  width: 55%;
+  background: var(--line-strong);
+}
+
+.pf-poster-block {
+  flex: 1;
+  border-radius: 4px;
+  background: var(--surface-3);
+  border: 1px solid var(--line);
+  margin-top: 0.15rem;
+}
+
+.pf-video {
+  width: 76%;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 0.45rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.pf-video-screen {
+  height: 42px;
+  border-radius: 5px;
+  background: var(--text);
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.35rem;
+}
+
+.pf-play {
+  width: 0;
+  height: 0;
+  border-left: 8px solid var(--brand-yellow);
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  display: block;
+  margin-left: 2px;
+}
+
+.pf-timeline {
+  display: flex;
+  gap: 3px;
+}
+
+.pf-timeline i {
+  flex: 1;
+  height: 6px;
+  border-radius: 2px;
+  background: var(--line-strong);
+}
+
+.pf-timeline i:nth-child(2) { background: var(--accent); }
+.pf-timeline i:nth-child(3) { background: var(--brand-yellow); }
+
+.pf-mock {
+  width: 82%;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.55rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.pf-mock .h {
+  height: 6px;
+  border-radius: 99px;
+  background: var(--text);
+  width: 60%;
+  margin-bottom: 0.28rem;
+}
+
+.pf-mock .l {
+  height: 4px;
+  border-radius: 99px;
+  background: var(--line-strong);
+  margin-bottom: 0.22rem;
+}
+
+.pf-mock .l.s { width: 70%; }
+
+.pf-cols {
+  display: flex;
+  gap: 4px;
+  margin-top: 0.4rem;
+}
+
+.pf-cols span {
+  flex: 1;
+  height: 26px;
+  border-radius: 4px;
+  background: var(--surface-3);
+  border: 1px solid var(--line);
+}
+
+.pf-cols span.a { background: var(--text); }
+.pf-cols span.b { background: var(--brand-yellow); }
+.pf-cols span.c { background: var(--accent); }
+
+.pf-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 44px;
+  margin-top: 0.4rem;
+}
+
+.pf-bars span {
+  flex: 1;
+  background: var(--text);
+  border-radius: 2px 2px 0 0;
+}
+
+.pf-bars span:nth-child(1) { height: 55%; }
+.pf-bars span:nth-child(2) { height: 78%; background: var(--accent); }
+.pf-bars span:nth-child(3) { height: 42%; }
+.pf-bars span:nth-child(4) { height: 92%; background: var(--brand-yellow); }
+.pf-bars span:nth-child(5) { height: 64%; }
+
+.pf-table {
+  display: grid;
+  gap: 3px;
+  margin-top: 0.35rem;
+}
+
+.pf-table i {
+  display: block;
+  height: 5px;
+  border-radius: 2px;
+  background: var(--line-strong);
+}
+
+.pf-table i:first-child { background: var(--text); width: 80%; }
+.pf-table i:nth-child(2) { width: 100%; }
+.pf-table i:nth-child(3) { width: 64%; background: var(--accent); }
+
+.pf-badge {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.55rem;
+  color: var(--text);
+}
+
+/* ---------- Isi kartu ---------- */
+.pf-body {
+  padding: 1rem 1.05rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pf-tag {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+  margin-bottom: 0.25rem;
+}
+
+.pf-body h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.pf-body p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.9rem;
+}
+
+.btn-detail,
+.btn-preview-link {
+  margin-top: auto;
+  align-self: flex-start;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 99px;
+  padding: 0.35rem 1rem;
+  transition: background 0.18s, border-color 0.18s, color 0.18s,
+    transform 0.15s ease;
+}
+
+.btn-detail:active,
+.btn-preview-link:active { transform: scale(0.96); }
+
+.btn-detail:hover,
+.btn-preview-link:hover {
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--bg);
+}
+
+.pf-empty {
+  display: none;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding: 2rem 0;
+}
+
+/* ---------- Modal detail ---------- */
+.pf-modal .modal-content {
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.pf-modal .modal-header { border-bottom: 0; }
+.pf-modal .modal-footer { border-top: 0; }
+
+.pf-modal-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.pf-modal-img[hidden] {
+  display: none;
+}
+
+.pf-modal-desc {
+  color: var(--text-soft);
+  font-size: 0.92rem;
+}
+
+.pf-points {
+  list-style: none;
+  padding: 0;
+  margin: 0.9rem 0 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.pf-points li {
+  display: flex;
+  gap: 0.55rem;
+  align-items: flex-start;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+.pf-points svg {
+  color: var(--accent);
+  flex: none;
+  margin-top: 0.32rem;
+}

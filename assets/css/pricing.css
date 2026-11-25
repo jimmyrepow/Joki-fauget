@@ -1,0 +1,79 @@
+/* ============================================================
+   Joki Fauget — pricing.css
+   Kartu paket (tanpa angka pasti) dan kotak catatan.
+   ============================================================ */
+
+.price-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.7rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.25s,
+    border-color 0.2s;
+  position: relative;
+}
+
+.price-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.price-card.featured {
+  border-color: var(--accent);
+  border-width: 2px;
+}
+
+.price-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--brand-yellow);
+  display: grid;
+  place-items: center;
+  color: var(--brand-navy);
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.9rem;
+}
+
+.price-card h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 0.35rem;
+}
+
+.price-card .price {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--accent-text);
+  margin-bottom: 0.7rem;
+}
+
+.price-note {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 1.1rem;
+}
+
+.note-box {
+  background: var(--surface-3);
+  border: 1px dashed var(--line-strong);
+  border-radius: 12px;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+}
+
+.note-box svg {
+  color: var(--accent);
+  flex: none;
+  margin-top: 0.15rem;
+}

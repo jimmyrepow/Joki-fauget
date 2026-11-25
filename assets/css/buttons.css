@@ -1,0 +1,133 @@
+/* ============================================================
+   Joki Fauget — buttons.css
+   Semua varian tombol di satu tempat:
+   .btn-main, .btn-ghost, .btn-yellow, .btn-outline-light-2.
+   (.btn-nav dan .btn-line ada di navbar.css / services.css
+   karena hanya dipakai di sana.)
+   ============================================================ */
+
+.btn-main {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font-weight: 600;
+  font-size: 0.98rem;
+  padding: 0.8rem 1.7rem;
+  border-radius: 99px;
+  border: 0;
+  transition: background 0.2s, transform 0.12s, box-shadow 0.2s, color 0.2s;
+  box-shadow: var(--shadow-accent);
+}
+
+.btn-main:hover {
+  background: var(--text);
+  color: var(--bg);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-main:active,
+.btn-yellow:active,
+.btn-ghost:active,
+.btn-outline-light-2:active {
+  transform: scale(0.98);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.98rem;
+  padding: 0.75rem 1.55rem;
+  border-radius: 99px;
+  border: 1.6px solid var(--text);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn-ghost:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.btn-yellow {
+  background: var(--brand-yellow);
+  color: var(--brand-navy);
+  font-weight: 700;
+  font-size: 0.98rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 99px;
+  border: 0;
+  transition: background 0.2s, transform 0.12s, box-shadow 0.2s;
+  box-shadow: 0 6px 18px rgba(255, 200, 61, 0.35);
+}
+
+.btn-yellow:hover {
+  background: var(--surface);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+
+.btn-outline-light-2 {
+  background: transparent;
+  color: var(--dark-text);
+  font-weight: 600;
+  font-size: 0.98rem;
+  padding: 0.75rem 1.7rem;
+  border-radius: 99px;
+  border: 1.6px solid var(--dark-line);
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.btn-outline-light-2:hover {
+  background: rgba(255, 245, 223, 0.1);
+  border-color: var(--brand-yellow);
+  color: #fff;
+}
+
+/* ---------- Tema untuk tombol Bootstrap yang dipakai di HTML ---------- */
+.btn-primary {
+  --bs-btn-color: var(--accent-contrast);
+  --bs-btn-bg: var(--accent);
+  --bs-btn-border-color: var(--accent);
+  --bs-btn-hover-color: var(--accent-contrast);
+  --bs-btn-hover-bg: var(--accent-strong);
+  --bs-btn-hover-border-color: var(--accent-strong);
+  --bs-btn-focus-shadow-rgb: 180, 71, 15;
+  --bs-btn-active-color: var(--brand-cream);
+  --bs-btn-active-bg: var(--accent-text);
+  --bs-btn-active-border-color: var(--accent-text);
+  --bs-btn-disabled-color: var(--accent-contrast);
+  --bs-btn-disabled-bg: var(--accent);
+  --bs-btn-disabled-border-color: var(--accent);
+  border-radius: 99px;
+  font-weight: 700;
+  box-shadow: var(--shadow-accent);
+}
+
+.btn-outline {
+  --bs-btn-color: var(--text);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: var(--line-strong);
+  --bs-btn-hover-color: var(--accent-contrast);
+  --bs-btn-hover-bg: var(--accent);
+  --bs-btn-hover-border-color: var(--accent);
+  --bs-btn-focus-shadow-rgb: 180, 71, 15;
+  --bs-btn-active-color: var(--accent-contrast);
+  --bs-btn-active-bg: var(--accent-strong);
+  --bs-btn-active-border-color: var(--accent-strong);
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  color: var(--text);
+  border-radius: 99px;
+  font-weight: 700;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s ease;
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-contrast);
+}
+
+.btn-outline:active { transform: scale(0.97); }
+
+.btn-sm { border-radius: 99px; }

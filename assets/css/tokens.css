@@ -1,0 +1,139 @@
+/* ============================================================
+   Joki Fauget — tokens.css
+   SUMBER KEBENARAN UNTUK SEMUA WARNA.
+   - Tema terang (default) di :root
+   - Tema gelap di [data-theme="dark"]
+   Ganti warna brand di bagian "Brand" saja; komponen memakai
+   token semantik, jadi otomatis ikut berubah di kedua tema.
+   ============================================================ */
+
+:root {
+  /* ---------- Brand (warna tetap di semua tema) ---------- */
+  --brand-navy: #142746;
+  --brand-navy-deep: #0D1B32;
+  --brand-cream: #FFF5DF;
+  --brand-cream-soft: #F7EBD2;
+  --brand-yellow: #FFC83D;
+  --brand-orange: #F27A35;
+
+  /* ---------- Permukaan (background) ---------- */
+  --bg: var(--brand-cream);
+  --bg-soft: var(--brand-cream-soft);
+  --surface: #ffffff;
+  --surface-2: #FDFAF2;
+  --surface-3: #F3E8D2;
+
+  /* ---------- Teks ---------- */
+  --text: var(--brand-navy);
+  --text-soft: #3c4a60;
+  --text-muted: #5F6B7A;
+
+  /* ---------- Garis & aksen ---------- */
+  --line: #D9CEBB;
+  --line-strong: #c9bca5;
+  --accent: var(--brand-orange);
+  --accent-text: #B4470F;
+  --accent-strong: #D85E1B;
+  --accent-contrast: var(--brand-navy);
+  --accent-soft: rgba(242, 122, 53, 0.16);
+  --yellow-line: #e8b520;
+
+  /* ---------- Section gelap (CTA akhir & footer) ---------- */
+  --dark-bg: var(--brand-navy);
+  --dark-bg-deep: var(--brand-navy-deep);
+  --dark-text: var(--brand-cream);
+  --dark-text-soft: rgba(255, 245, 223, 0.82);
+  --dark-line: rgba(255, 245, 223, 0.16);
+
+  /* ---------- Status ---------- */
+  --success: #1f7a44;
+  --success-bg: #eaf7ec;
+  --success-line: #a5d3ab;
+  --success-text: #1e6b2e;
+  --danger: #c62828;
+  --danger-bg: #fff5f5;
+
+  /* ---------- Bayangan ---------- */
+  --shadow-sm: 0 2px 10px rgba(20, 39, 70, 0.06);
+  --shadow-md: 0 14px 32px rgba(20, 39, 70, 0.10);
+  --shadow-lg: 0 26px 60px rgba(20, 39, 70, 0.14);
+  --shadow-accent: 0 6px 18px rgba(242, 122, 53, 0.28);
+  --shadow-header: 0 6px 24px rgba(20, 39, 70, 0.08);
+  --hl: rgba(255, 200, 61, 0.55);
+
+  /* ---------- Gradien mockup/portfolio ---------- */
+  --grad-mockup-body: linear-gradient(170deg, #ffffff 0%, var(--brand-cream-soft) 100%);
+  --grad-pf-web: linear-gradient(140deg, #eef1f7, #dde4f0);
+  --grad-pf-dash: linear-gradient(140deg, #FFF5DF, #F7EBD2);
+  --grad-pf-data: linear-gradient(140deg, #f6efe2, #e9dfcd);
+
+  /* ---------- Lain-lain ---------- */
+  --radius: 16px;
+  --header-bg: var(--brand-cream);
+  --header-offset: 72px;
+  --font-heading: "Plus Jakarta Sans", system-ui, sans-serif;
+  --paper-texture: url("../img/paper-texture.svg");
+  --field-bg: var(--brand-cream);
+  --mock-bg: #ffffff;
+
+  color-scheme: light;
+}
+
+/* ============================================================
+   TEMA GELAP
+   Aktifkan lewat <html data-theme="dark"> (lihat theme.js).
+   Brand navy/cream dipakai sebagai latar & teks terang, sehingga
+   identitas visual tetap sama, hanya kontrasnya dibalik.
+   ============================================================ */
+[data-theme="dark"] {
+  --bg: #0B1727;
+  --bg-soft: #101F33;
+  --surface: #132238;
+  --surface-2: #182B45;
+  --surface-3: #1F3550;
+
+  --text: #F4EEE2;
+  --text-soft: #CAD3E1;
+  --text-muted: #94A4BA;
+
+  --line: #26374F;
+  --line-strong: #3B5170;
+  --accent: #FF8B4D;
+  --accent-text: #FFA06B;
+  --accent-strong: #FFA66B;
+  --accent-contrast: #10203a;
+  --accent-soft: rgba(255, 139, 77, 0.22);
+  --yellow-line: #6d5416;
+
+  --dark-bg: #07111E;
+  --dark-bg-deep: #050D17;
+  --dark-text: var(--brand-cream);
+  --dark-text-soft: rgba(255, 245, 223, 0.86);
+  --dark-line: rgba(255, 245, 223, 0.14);
+
+  --success: #7FD69B;
+  --success-bg: #12261B;
+  --success-line: #2f6b45;
+  --success-text: #A7E6BB;
+  --danger: #FF9B9B;
+  --danger-bg: #2A1620;
+
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 16px 34px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 26px 60px rgba(0, 0, 0, 0.55);
+  --shadow-accent: 0 6px 18px rgba(255, 139, 77, 0.28);
+  --shadow-header: 0 6px 24px rgba(0, 0, 0, 0.45);
+  --hl: rgba(255, 200, 61, 0.26);
+
+  --grad-mockup-body: linear-gradient(170deg, #1B2C45 0%, #132238 100%);
+  --grad-pf-web: linear-gradient(140deg, #17263D, #101E31);
+  --grad-pf-dash: linear-gradient(140deg, #1E2B3D, #152234);
+  --grad-pf-data: linear-gradient(140deg, #1B2739, #101B2B);
+
+  --header-bg: #0E1B2C;
+  --paper-texture: url("../img/paper-texture-dark.svg");
+  --field-bg: #0F1E31;
+  --mock-bg: #16263C;
+
+  color-scheme: dark;
+}

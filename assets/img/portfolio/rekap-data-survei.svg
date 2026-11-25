@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-label="Demo rekap data survei">
+  <rect width="800" height="500" fill="#F7EBD2"/>
+  <rect x="34" y="28" width="732" height="444" rx="12" fill="#FFFFFF" stroke="#D9CEBB" stroke-width="2"/>
+  <rect x="34" y="28" width="732" height="48" rx="12" fill="#142746"/>
+  <text x="58" y="58" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#FFF5DF">Rekap Data Survei</text>
+  <text x="742" y="58" font-family="Arial,sans-serif" font-size="11" fill="#FFC83D" text-anchor="end">248 responden</text>
+  <rect x="58" y="96" width="140" height="30" rx="8" fill="#FFF5DF" stroke="#D9CEBB"/>
+  <text x="128" y="116" font-family="Arial,sans-serif" font-size="11" fill="#777777" text-anchor="middle">Filter: Semua</text>
+  <rect x="58" y="146" width="684" height="300" rx="8" fill="#FDFAF2" stroke="#D9CEBB"/>
+  <rect x="58" y="146" width="684" height="40" rx="8" fill="#F7EBD2"/>
+  <g font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#142746">
+    <text x="76" y="172">No</text><text x="130" y="172">Nama</text><text x="300" y="172">Kategori</text>
+    <text x="470" y="172">Status</text><text x="650" y="172">Skor</text>
+  </g>
+  <g stroke="#EDE3D0">
+    <path d="M58 226h684M58 276h684M58 326h684M58 376h684M58 426h684"/>
+  </g>
+  <g font-family="Arial,sans-serif" font-size="11" fill="#3C4A60">
+    <text x="76" y="206">1</text><text x="130" y="206">Responden A</text><text x="300" y="206">Mahasiswa</text><text x="650" y="206">88</text>
+    <text x="76" y="256">2</text><text x="130" y="256">Responden B</text><text x="300" y="256">Pelajar</text><text x="650" y="256">92</text>
+    <text x="76" y="306">3</text><text x="130" y="306">Responden C</text><text x="300" y="306">Umum</text><text x="650" y="306">76</text>
+    <text x="76" y="356">4</text><text x="130" y="356">Responden D</text><text x="300" y="356">Mahasiswa</text><text x="650" y="356">95</text>
+    <text x="76" y="406">5</text><text x="130" y="406">Responden E</text><text x="300" y="406">Umum</text><text x="650" y="406">84</text>
+  </g>
+  <g font-family="Arial,sans-serif" font-size="10" font-weight="bold">
+    <rect x="464" y="190" width="76" height="22" rx="11" fill="#E7F5EA"/><text x="502" y="205" fill="#1F7A44" text-anchor="middle">Valid</text>
+    <rect x="464" y="240" width="76" height="22" rx="11" fill="#E7F5EA"/><text x="502" y="255" fill="#1F7A44" text-anchor="middle">Valid</text>
+    <rect x="464" y="290" width="76" height="22" rx="11" fill="#FFF0D5"/><text x="502" y="305" fill="#A96A12" text-anchor="middle">Cek</text>
+    <rect x="464" y="340" width="76" height="22" rx="11" fill="#E7F5EA"/><text x="502" y="355" fill="#1F7A44" text-anchor="middle">Valid</text>
+    <rect x="464" y="390" width="76" height="22" rx="11" fill="#E7F5EA"/><text x="502" y="405" fill="#1F7A44" text-anchor="middle">Valid</text>
+  </g>
+</svg>

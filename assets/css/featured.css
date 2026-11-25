@@ -1,0 +1,261 @@
+/* ============================================================
+   Joki Fauget — featured.css
+   Section "Solusi yang Bisa Anda Temukan": 3 layanan unggulan
+   dengan preview visual (browser, dashboard, dokumen).
+   ============================================================ */
+
+.featured-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.1rem 1.4rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.22s ease, box-shadow 0.22s ease,
+    border-color 0.22s ease, background-color 0.25s ease;
+}
+
+.featured-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--line-strong);
+}
+
+.featured-visual {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  min-height: 158px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.featured-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+  margin-bottom: 0.35rem;
+}
+
+.featured-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+
+.featured-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 0.9rem;
+}
+
+.featured-points {
+  list-style: none;
+  padding: 0;
+  margin: auto 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.featured-points li {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-soft);
+  background: var(--surface-3);
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  padding: 0.2rem 0.6rem;
+}
+
+/* ---------- Preview: browser ---------- */
+.fv {
+  width: 100%;
+  border-radius: 9px;
+  background: var(--mock-bg);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.featured-card:hover .fv {
+  transform: scale(1.012);
+}
+
+.fv-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0.5rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface-3);
+}
+
+.fv-bar .dot {
+  width: 6px;
+  height: 6px;
+}
+
+.fv-url {
+  flex: 1;
+  height: 8px;
+  margin-left: 0.35rem;
+  border-radius: 99px;
+  background: var(--line);
+}
+
+.fv-body { padding: 0.55rem; }
+
+.fv-line {
+  height: 6px;
+  border-radius: 99px;
+  background: var(--line);
+  margin-bottom: 0.3rem;
+}
+
+.fv-line.strong { background: var(--text); height: 8px; }
+.fv-line.w-70 { width: 70%; }
+.fv-line.w-90 { width: 90%; }
+.fv-line.w-80 { width: 80%; }
+.fv-line.w-60 { width: 60%; }
+.fv-line.w-50 { width: 50%; }
+.fv-line.w-40 { width: 40%; }
+
+.fv-row {
+  display: flex;
+  gap: 0.3rem;
+  margin: 0.55rem 0;
+}
+
+.fv-btn {
+  width: 48px;
+  height: 12px;
+  border-radius: 99px;
+  background: var(--accent);
+  display: block;
+}
+
+.fv-btn.ghost {
+  background: transparent;
+  border: 1px solid var(--line-strong);
+}
+
+.fv-blocks {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.fv-blocks span {
+  flex: 1;
+  height: 22px;
+  border-radius: 4px;
+  background: var(--surface-3);
+  border: 1px solid var(--line);
+}
+
+/* ---------- Preview: dashboard ---------- */
+.fv-dash { padding: 0.65rem; }
+
+.fv-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.fv-tag {
+  background: var(--brand-yellow);
+  color: var(--brand-navy);
+  border-radius: 4px;
+  padding: 0.05rem 0.3rem;
+  font-size: 0.5rem;
+}
+
+.fv-metrics {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.55rem;
+}
+
+.fv-metrics div {
+  flex: 1;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.3rem 0.4rem;
+  background: var(--surface);
+}
+
+.fv-metrics small {
+  display: block;
+  font-size: 0.5rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.fv-metrics b {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.72rem;
+  color: var(--text);
+}
+
+.fv-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 52px;
+}
+
+.fv-bars span {
+  flex: 1;
+  background: var(--text);
+  border-radius: 2px 2px 0 0;
+}
+
+.fv-bars span:nth-child(1) { height: 40%; }
+.fv-bars span:nth-child(2) { height: 64%; }
+.fv-bars span:nth-child(3) { height: 48%; background: var(--accent); }
+.fv-bars span:nth-child(4) { height: 78%; }
+.fv-bars span:nth-child(5) { height: 62%; }
+.fv-bars span:nth-child(6) { height: 92%; background: var(--brand-yellow); }
+
+/* ---------- Preview: dokumen ---------- */
+.fv-doc {
+  position: relative;
+  background: var(--mock-bg);
+  padding: 0.9rem 0.9rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  width: 78%;
+  box-shadow: var(--shadow-sm);
+  transform: rotate(-1.5deg);
+}
+
+.fv-sheet .fv-line { margin-bottom: 0.32rem; }
+
+.fv-badge-doc {
+  position: absolute;
+  right: -12px;
+  bottom: -10px;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.18rem 0.45rem;
+  border-radius: 5px;
+  box-shadow: var(--shadow-sm);
+}

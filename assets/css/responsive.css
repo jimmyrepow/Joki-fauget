@@ -1,0 +1,138 @@
+/* ============================================================
+   Joki Fauget — responsive.css
+   Penyesuaian per breakpoint Bootstrap:
+   <=991.98px  tablet (menu berubah jadi dropdown)
+   <=767.98px  mobile
+   <=420px     mobile kecil
+   ============================================================ */
+
+a,
+button {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 0.75rem;
+    margin-top: 0.6rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  .nav-link-custom {
+    padding: 0.7rem 0.8rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    margin-top: 0.35rem;
+  }
+
+  .filter-btn,
+  .btn-detail,
+  .btn-line { min-height: 42px; }
+
+  .form-control,
+  .form-select { font-size: 16px; min-height: 46px; }
+  textarea.form-control { min-height: 108px; }
+
+  .section:not(.page-head):not(.final-cta) { padding: 3.2rem 0; }
+  .hero { padding-top: 2rem; }
+  .mockup { max-width: 100%; }
+  .theme-toggle { margin-left: 0.25rem; width: 40px; height: 40px; }
+  .float-card { display: none; }
+  .hero-stack { padding-bottom: 0; }
+}
+
+@media (max-width: 767.98px) {
+  .site-header { padding-top: env(safe-area-inset-top); }
+  .navbar { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+  .brand { font-size: 1.18rem; }
+  .brand .brand-tag { font-size: 0.58rem; }
+  .navbar-toggler { min-width: 44px; min-height: 40px; }
+
+  .hero { padding: 1.6rem 0 2.4rem; }
+  .hero-title { font-size: clamp(1.85rem, 7.4vw, 2.4rem); line-height: 1.12; }
+  .hero-sub { font-size: 0.96rem; }
+
+  .hero-actions .btn,
+  .page-head .btn,
+  .final-cta .btn,
+  .btn-main,
+  .btn-ghost,
+  .btn-yellow,
+  .btn-outline-light-2 {
+    min-height: 46px;
+  }
+
+  .final-cta .alert-actions .btn { width: 100%; }
+
+  .filter-btn,
+  .btn-detail,
+  .btn-line {
+    min-height: 42px;
+  }
+
+  .filter-btn { padding: 0.5rem 0.9rem; font-size: 0.8rem; }
+
+  .faq-btn { padding: 0.95rem 1rem; font-size: 0.92rem; }
+  .faq-panel-inner { padding: 0.8rem 1rem 1rem; font-size: 0.86rem; }
+
+  .form-card { padding: 1.15rem; }
+  .form-control,
+  .form-select { font-size: 16px; min-height: 46px; }
+  textarea.form-control { min-height: 108px; }
+
+  .final-cta { padding: 2.8rem 0; }
+  .final-cta p { font-size: 0.92rem; }
+
+  .pf-modal .modal-dialog { margin: 0.75rem; }
+  .pf-modal-img { border-radius: 8px; }
+  .foot-bottom { justify-content: center; text-align: center; }
+  .site-footer { padding-bottom: calc(1.6rem + env(safe-area-inset-bottom)); }
+}
+
+@media (max-width: 420px) {
+  .container-custom { padding-inline: 0.95rem; }
+  .hero-actions .btn { width: 100%; }
+  .mockup-url { display: none; }
+  .section-title { font-size: 1.55rem; }
+  .price-card,
+  .note-box { padding: 1.1rem; }
+  .info-toast { left: 12px; right: 12px; bottom: 12px; width: auto; }
+}
+
+@media (pointer: coarse) {
+  .filter-btn,
+  .btn-detail,
+  .btn-line { min-height: 42px; }
+
+  .form-control,
+  .form-select { font-size: 16px; min-height: 46px; }
+  textarea.form-control { min-height: 108px; }
+}
+
+@media (hover: none) {
+  .card-lift:hover,
+  .featured-card:hover,
+  .step:hover,
+  .why:hover,
+  .price-card:hover,
+  .mockup:hover,
+  .portfolio-card:hover .pf-img,
+  .featured-card:hover .fv,
+  .service-card:hover .icon-box,
+  .step:hover .step-num,
+  .why:hover .why-icon {
+    transform: none;
+  }
+}

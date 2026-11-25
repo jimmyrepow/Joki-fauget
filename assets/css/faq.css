@@ -1,0 +1,79 @@
+/* ============================================================
+   Joki Fauget — faq.css
+   Accordion FAQ: item, tombol, ikon plus, dan panel.
+   (Logika buka/tutup ada di assets/js/faq.js)
+   ============================================================ */
+
+.faq-list {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.faq {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  overflow: hidden;
+  transition: box-shadow 0.2s, border-color 0.2s, background-color 0.25s;
+}
+
+.faq:hover { border-color: var(--line-strong); }
+
+.faq.open {
+  box-shadow: var(--shadow-sm);
+  border-color: var(--accent);
+}
+
+.faq-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: none;
+  border: 0;
+  text-align: left;
+  padding: 1rem 1.15rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 0.96rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.faq-btn:hover { background: var(--surface-2); }
+.faq-btn > span { min-width: 0; overflow-wrap: anywhere; }
+
+.faq-ico {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--surface-3);
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  flex: none;
+  transition: background 0.22s, transform 0.28s, color 0.22s,
+    border-color 0.22s;
+  color: var(--text);
+}
+
+.faq.open .faq-ico {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-contrast);
+  transform: rotate(45deg);
+}
+
+.faq-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.32s ease;
+}
+
+.faq-panel-inner {
+  padding: 0.85rem 1.15rem 1.05rem;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  border-top: 1px dashed var(--line);
+}

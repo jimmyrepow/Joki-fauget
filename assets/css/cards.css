@@ -1,0 +1,18 @@
+/* ============================================================
+   Joki Fauget — cards.css
+   Kartu dasar yang dipakai ulang di beberapa section.
+   ============================================================ */
+
+.card-lift {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: transform 0.22s ease, box-shadow 0.22s ease,
+    border-color 0.22s ease, background-color 0.25s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--line-strong);
+}
